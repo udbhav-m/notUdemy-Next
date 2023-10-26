@@ -53,6 +53,11 @@ JSON Web Tokens (JWT): Secure user authentication.
 nookies: A library for handling cookies with Next.js.
 Material-UI (MUI): A popular React UI framework for the user interface.
 
+- **Frontend**: Next.js, TypeScript, Recoil, Material-UI (MUI)
+- **Backend**: Next.js
+- **Database**: MongoDB
+- **Authentication**: JSON Web Tokens (JWT), nookies
+
 ## CRUD Operations
 The application allows you to perform CRUD operations on courses:
 
@@ -67,7 +72,3 @@ There are a few pending tasks:
 Toasts for Alerts: Implement toast notifications for user alerts and notifications.
 User-Side Functionality: Develop user-side functionality for purchasing and accessing courses.
 
-- **Frontend**: Next.js, TypeScript, Recoil, Material-UI (MUI)
-- **Backend**: Next.js
-- **Database**: MongoDB
-- **Authentication**: JSON Web Tokens (JWT), nookies

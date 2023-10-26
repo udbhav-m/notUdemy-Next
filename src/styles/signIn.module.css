@@ -1,0 +1,19 @@
+.signInContainer{
+    display: flex;
+    justify-content: center;
+    background-color: #e4e4e4;
+}
+
+.signInCard{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.textfieldIn{
+    width: 90%;
+}

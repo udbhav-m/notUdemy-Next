@@ -1,0 +1,24 @@
+.updateCard {
+  width: 35vw;
+}
+
+.getCourseContainer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  background-color: #e4e4e4;
+}
+
+.getCard {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+  width: 100%;
+}
+.cContent {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+}

@@ -19,7 +19,7 @@ JSON Web Tokens (JWT): Secure user authentication.
 nookies: A library for handling cookies with Next.js.
 Material-UI (MUI): A popular React UI framework for the user interface.
 
-##CRUD Operations
+## CRUD Operations
 The application allows you to perform CRUD operations on courses:
 
 Create: Add a new course through the "Create Course" feature.
@@ -27,8 +27,8 @@ Read: View course details by navigating to a course's page.
 Update: Edit course information by clicking the "Edit" button on a course's page.
 Delete: Remove a course by clicking the "Delete" button on a course's page.
 
-##To-Do
+## To-Do
 There are a few pending tasks:
 
-Toasts for Alerts: Implement toast notifications for user alerts and notifications.
-User-Side Functionality: Develop user-side functionality for purchasing and accessing courses.
+# Toasts for Alerts: Implement toast notifications for user alerts and notifications.
+# User-Side Functionality: Develop user-side functionality for purchasing and accessing courses.

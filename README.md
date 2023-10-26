@@ -30,5 +30,5 @@ Delete: Remove a course by clicking the "Delete" button on a course's page.
 ## To-Do
 There are a few pending tasks:
 
-# Toasts for Alerts: Implement toast notifications for user alerts and notifications.
-# User-Side Functionality: Develop user-side functionality for purchasing and accessing courses.
+Toasts for Alerts: Implement toast notifications for user alerts and notifications.
+User-Side Functionality: Develop user-side functionality for purchasing and accessing courses.

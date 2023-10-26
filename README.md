@@ -1,4 +1,4 @@
-##notUdemy - Course Selling App
+## notUdemy - Course Selling App
 
 Welcome to notUdemy, a course-selling application built with Next.js, MongoDB, Recoil, JWT authentication (using nookies), and TypeScript. This README provides an overview of the project and how to perform CRUD (Create, Read, Update, Delete) operations within the application.
 

@@ -1,47 +1,40 @@
-# notUdemy
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Getting Started
 
-Welcome to notUdemy, a course-selling application built with Next.js, MongoDB, Recoil, JWT authentication (using nookies), and TypeScript. This README provides an overview of the project and how to perform CRUD (Create, Read, Update, Delete) operations within the application.
+First, run the development server:
 
-## Features
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-### Admin Functionality
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-1. **Signup**: Admins can create accounts with a username and password.
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-2. **Login**: Admins can log in securely using their credentials.
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-3. **Add a Course**: Admins can add new courses to the platform, including details like title, description, price, image, and publication status.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-4. **View Courses**: Admins can view a list of all courses, including course details.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-5. **Delete Course**: Admins can delete courses they've added.
+## Learn More
 
-6. **Update Course**: Admins can edit course details.
+To learn more about Next.js, take a look at the following resources:
 
-### User Functionality
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-1. **Signup**: Users can create accounts with a username and password.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-2. **Login**: Users can log in securely using their credentials.
+## Deploy on Vercel
 
-3. **View Courses**: Users can browse and view all available courses, including details.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-4. **Purchase Courses**: Authenticated users can purchase courses and gain access to the content.
-
-5. **View Purchased Courses**: Users can view the courses they've purchased.
-
-### Planned Features
-
-1. **Toasts for Alerts**: Implement toast notifications to provide alerts and feedback to users.
-
-2. **Payment Page**: Integrate a payment gateway for handling course purchases.
-
-3. **User side pages**: Should add the user functionality.
-
-## Technologies Used
-
-- **Frontend**: Next.js, TypeScript, Recoil, Material-UI (MUI)
-- **Backend**: Next.js
-- **Database**: MongoDB
-- **Authentication**: JSON Web Tokens (JWT), nookies
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

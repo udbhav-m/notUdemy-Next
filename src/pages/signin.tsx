@@ -24,13 +24,13 @@ import axios from "axios";
 import { useRouter } from "next/router";
 // import { baseURL } from "./common";
 import { setCookie } from "nookies";
-import { ensureDbConnected } from "./api/_db";
+
 
 interface signInProps {
   funName: () => void;
 }
 function SignIn() {
-  ensureDbConnected()
+
   const router = useRouter();
   const setAppBar = useSetRecoilState(appBarState);
   setAppBar("LandingAppBar");

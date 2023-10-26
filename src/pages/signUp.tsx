@@ -6,8 +6,7 @@ import { Card, Typography, TextField, Button } from "@mui/material";
 import styles from "@/styles/SignUp.module.css";
 import axios from "axios";
 import { useRouter } from "next/router";
-import { ensureDbConnected } from "./api/_db";
-
+import { ensureDbConnected } from "./api/_dbConnection";
 
 interface propType {
   handleFunction: () => void;

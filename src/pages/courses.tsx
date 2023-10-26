@@ -28,7 +28,7 @@ interface courseStructure {
 }
 
 interface props extends courseStructure {
-  delFunction: (id: number) => void;
+  delFunction: any;
   onClickHandle: any;
 }
 function Courses() {
@@ -63,16 +63,16 @@ function Courses() {
       console.log(error.message);
     }
   }
-  async function deleteById(Id: number) {
+  async function deleteById(courseId: number) {
     try {
-      console.log(Id);
-      const delAPI = await axios.delete(`/admin/courses/${Id}`, {
+      console.log(courseId);
+      const delAPI = await axios.delete(`/api/admin/delete/${courseId}`, {
         headers: {
           "Content-type": "application/json",
           auth: token,
         },
       });
-      console.log(delAPI.data);
+      console.log("delAPI", delAPI.data);
       getCourses();
     } catch (err: any) {
       console.log(err.message);
@@ -88,8 +88,12 @@ function Courses() {
         ) : (
           courseList.map((each) => {
             const handle = () => {
-              let CourseId = each.CourseId
+              let CourseId = each.CourseId;
               router.push(`/getCourse/${CourseId}`);
+            };
+            const handleDelete = () => {
+              let courseId = each.CourseId;
+              deleteById(courseId);
             };
             return (
               <CourseCard
@@ -100,7 +104,7 @@ function Courses() {
                 published={each.published}
                 CourseId={each.CourseId}
                 price={each.price}
-                delFunction={deleteById}
+                delFunction={handleDelete}
                 onClickHandle={handle}
               />
             );
@@ -148,7 +152,7 @@ export function CourseCard(props: props) {
             variant="body2"
             color="text.secondary"
           >
-            {props.description}
+            {/* {props.description} */}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -160,11 +164,7 @@ export function CourseCard(props: props) {
         >
           <b>Edit</b>
         </Button>
-        <Button
-          onClick={() => props.delFunction(props.CourseId)}
-          size="small"
-          color="error"
-        >
+        <Button onClick={props.delFunction} size="small" color="error">
           <b>Delete</b>
         </Button>
       </CardActions>

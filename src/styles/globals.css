@@ -106,12 +106,12 @@ a {
   }
 } */
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   background-color: #e4e4e4;
 }

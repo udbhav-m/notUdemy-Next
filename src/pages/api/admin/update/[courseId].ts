@@ -16,7 +16,6 @@ export default async function updateAPI(
       adminAuthentication(req, res, async () => {
         const router = useRouter();
         let courseId = req.query.courseId as unknown as courseParam;
-        let courseIdInt = courseId;
         const course = req.body;
         if (courseId && typeof `courseParam`) {
           const output = updateCourse(courseId, course);

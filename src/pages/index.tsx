@@ -4,14 +4,14 @@ import { appBarState } from "./atoms";
 import { Typography, Button } from "@mui/material";
 import { useRouter } from "next/router";
 import styles from "@/styles/landing.module.css";
-import { ensureDbConnected } from "./api/_db";
+// import { ensureDbConnected } from "./api/_db";
 
 function Landing() {
   const setAppBar = useSetRecoilState(appBarState);
   setAppBar("LandingAppBar");
   const router = useRouter();
   return (
-    <div>
+    <div className="container">
       <AppBar></AppBar>
       <div className={styles.centerData}>
         <div className={styles.leftData}>

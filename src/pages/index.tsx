@@ -4,7 +4,6 @@ import { appBarState } from "./api/_atoms";
 import { Typography, Button } from "@mui/material";
 import { useRouter } from "next/router";
 import styles from "@/styles/landing.module.css";
-// import { ensureDbConnected } from "./api/_db";
 
 function Landing() {
   const setAppBar = useSetRecoilState(appBarState);

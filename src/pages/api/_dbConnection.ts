@@ -1,17 +1,18 @@
-import mongoose, { ConnectOptions } from "mongoose";
+import mongoose from "mongoose";
+let alreadyConnected = false;
+const URI =
+  typeof process.env.MONGODB_URI === "string" ? process.env.MONGODB_URI : "";
 
-export const connectDB = async () => {
+export function ensureDbConnect() {
+  if (!alreadyConnected) {
     try {
-
-        mongoose.connect(process.env.MONGODB_URI!, { dbName: 'test' } as ConnectOptions)
-        const connection = mongoose.connection;
-
-        connection.on('connected', () => {
-            console.log('MongoDB connected');
-        });
-
-    } catch (e) {
-        console.log("something went wrong");
-        console.log((e as Error).message);
+      // Connect to the database
+      mongoose.connect(URI).then(() => {
+        console.log("MongoDB connected");
+        alreadyConnected = true;
+      });
+    } catch (error) {
+      console.error("Database connection error:", error);
     }
+  }
 }

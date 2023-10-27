@@ -1,7 +1,5 @@
-import jwt, { JwtPayload, VerifyErrors } from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 import { NextApiRequest, NextApiResponse } from "next";
-import { NextRequest, NextResponse } from "next/server";
-import { parseCookies } from "nookies";
 const secretKeyForAdmins = "adminsSecretK3Y";
 const secretKeyForUser = "usersSecretK3Y";
 
@@ -84,7 +82,6 @@ export const userAuthentication = (
         return console.log({ error: "failed. userObj is string" });
       }
       console.log(`Token is valid. welcome ${user.username}`);
-      NextResponse.next();
     });
   } else {
     res.status(401).json({ error: "Invalid/tampered token" });

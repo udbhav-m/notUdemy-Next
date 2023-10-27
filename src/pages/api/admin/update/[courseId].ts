@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { adminAuthentication } from "../../_jwt";
-import { useRouter } from "next/router";
 import { courseStructure, courses } from "../../_common";
 
 interface courseParam {
@@ -14,7 +13,6 @@ export default async function updateAPI(
   try {
     if (req.method === "PUT") {
       adminAuthentication(req, res, async () => {
-        const router = useRouter();
         let courseId = req.query.courseId as unknown as courseParam;
         const course = req.body;
         if (courseId && typeof `courseParam`) {

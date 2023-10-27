@@ -6,11 +6,17 @@ Welcome to notUdemy, a course-selling application built with Next.js, MongoDB, R
 ## Features
 
 Create Courses: Add new courses with titles, descriptions, prices, images, and more.
+
 Read Courses: View course details, including title, description, price, and images.
+
 Update Courses: Edit course information to keep it up-to-date.
+
 Delete Courses: Remove courses that are no longer available.
+
 User Authentication: Secure user authentication using JWT and nookies.
+
 Strict TypeScript: The project is developed using TypeScript for strong typing.
+
 ### Admin Functionality
 
 1. **Signup**: Admins can create accounts with a username and password.
@@ -46,29 +52,8 @@ Strict TypeScript: The project is developed using TypeScript for strong typing.
 3. **User side pages**: Should add the user functionality.
 
 ## Technologies Used
-Next.js: A React framework for building server-rendered applications.
-MongoDB: A NoSQL database for storing course data.
-Recoil: A state management library for React applications.
-JSON Web Tokens (JWT): Secure user authentication.
-nookies: A library for handling cookies with Next.js.
-Material-UI (MUI): A popular React UI framework for the user interface.
 
 - **Frontend**: Next.js, TypeScript, Recoil, Material-UI (MUI)
 - **Backend**: Next.js
 - **Database**: MongoDB
 - **Authentication**: JSON Web Tokens (JWT), nookies
-
-## CRUD Operations
-The application allows you to perform CRUD operations on courses:
-
-Create: Add a new course through the "Create Course" feature.
-Read: View course details by navigating to a course's page.
-Update: Edit course information by clicking the "Edit" button on a course's page.
-Delete: Remove a course by clicking the "Delete" button on a course's page.
-
-## To-Do
-There are a few pending tasks:
-
-Toasts for Alerts: Implement toast notifications for user alerts and notifications.
-User-Side Functionality: Develop user-side functionality for purchasing and accessing courses.
-

@@ -47,4 +47,5 @@ export const adminLoginState = atom({
   default: false,
 });
 
-export default "xyc";
+
+export default "xyz"

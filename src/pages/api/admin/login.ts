@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { inputvalues, userStructure,admin } from "../_common";
 import { generateKey } from "../_jwt";
+import { ensureDbConnect } from "../_dbConnection";
 
 export default async function loginAPI(
   req: NextApiRequest,
@@ -13,6 +14,7 @@ export default async function loginAPI(
         console.log({ error: "Invalid input details" });
         return res.json({ error: "Invalid input details" });
       }
+      ensureDbConnect();
       const output = await login(inputData.data);
       req.headers.username = inputData.data.username;
       res.json(output);

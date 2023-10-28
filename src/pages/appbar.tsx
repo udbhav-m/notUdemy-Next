@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { parseCookies } from "nookies";
 
+
 function AppBar() {
   const currentAppBar = useRecoilValue(appBarState);
   const cookie = parseCookies();

@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
 import { NextApiRequest, NextApiResponse } from "next";
+import { ensureDbConnect } from "./_dbConnection";
 const secretKeyForAdmins = "adminsSecretK3Y";
 const secretKeyForUser = "usersSecretK3Y";
 
@@ -36,6 +37,7 @@ export const adminAuthentication = (
   callback: () => void
 ) => {
   const token = req.headers.auth;
+  ensureDbConnect();
   if (token && typeof token === "string") {
     jwt.verify(token, secretKeyForAdmins, (err, user) => {
       if (err) {

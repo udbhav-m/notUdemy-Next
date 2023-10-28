@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { inputvalues, admin, userStructure } from "../_common";
+import { ensureDbConnect } from "../_dbConnection";
 
 export default async function signupAPI(
   req: NextApiRequest,
@@ -13,6 +14,7 @@ export default async function signupAPI(
           .status(411)
           .json({ toast: "error", message: "not a valid input" });
       } else {
+        ensureDbConnect();
         const output = await signup(inputData.data);
         res.send(output);
       }

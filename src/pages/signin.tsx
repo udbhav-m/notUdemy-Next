@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import styles from "../styles/signIn.module.css";
-import AppBar from "./appbar";
+import styles from "@/styles/signIn.module.css";
+import AppBar from "./commonComponents/appbar";
 import {
   Card,
   TextField,
@@ -36,6 +36,7 @@ function SignIn() {
   const password = useRecoilValue(passwordState);
   const userLogin = useRecoilValue(userLoginState);
   const adminLogin = useRecoilValue(adminLoginState);
+
   async function signin() {
     try {
       let URL: string = "";
@@ -66,10 +67,10 @@ function SignIn() {
       }
 
       if (res.token && adminLogin) {
-        router.push("/courses");
+        router.push("/adminComponents/courses");
       } else {
         if (res.token && userLogin) {
-          router.push("/user/courses");
+          router.push("/userComponents/courses");
         }
       }
     } catch (error: any) {

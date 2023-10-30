@@ -47,5 +47,8 @@ export const adminLoginState = atom({
   default: false,
 });
 
-
-export default "xyz"
+const auth = atom({
+  key: "authState",
+  default: false,
+});
+export default auth;

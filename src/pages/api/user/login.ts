@@ -1,9 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { inputvalues, userStructure,admin } from "../_common";
-import { generateKeyforAdmin } from "../_jwt";
+import { inputvalues, user, userStructure } from "../_common";
 import { ensureDbConnect } from "../_dbConnection";
+import { generateKeyforUser } from "../_jwt";
 
-export default async function loginAPI(
+export default async function userLoginAPI(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
@@ -28,9 +28,10 @@ export default async function loginAPI(
 async function login(input: userStructure) {
   let { username, password } = input;
   return new Promise(async (resolve, reject) => {
-    let userExists = await admin.findOne({ username, password });
+    let userExists = await user.findOne({ username, password });
     if (userExists) {
-      let token = generateKeyforAdmin(input);
+      let token = generateKeyforUser(input);
+      console.log(token);
       if (token && typeof token === "string") {
         console.log(
           `Logged-in successfully. welcome ${username}. Token: ${token}`

@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { courseStructure,admin, courses } from "../_common";
+import { courseStructure, admin, courses } from "../_common";
 import { adminAuthentication } from "../_jwt";
+
 export default async function getCoursesAPI(
   req: NextApiRequest,
   res: NextApiResponse

@@ -1,6 +1,6 @@
 import { useSetRecoilState } from "recoil";
 import { appBarState } from "./api/_atoms";
-import AppBar from "./appbar";
+import AppBar from "./commonComponents/appbar";
 import { LinearProgress, Typography } from "@mui/material";
 import { useEffect } from "react";
 import { useRouter } from "next/router";

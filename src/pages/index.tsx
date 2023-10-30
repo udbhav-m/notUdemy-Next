@@ -1,4 +1,4 @@
-import AppBar from "./appbar";
+import AppBar from "./commonComponents/appbar";
 import { useSetRecoilState } from "recoil";
 import { appBarState } from "./api/_atoms";
 import { Typography, Button } from "@mui/material";

@@ -48,7 +48,7 @@ Strict TypeScript: The project is developed using TypeScript for strong typing.
 
 2. **Payment Page**: Integrate a payment gateway for handling course purchases.
 
-3. **User side pages**: Should add the user functionality.
+3. **Add to cart**: Should add the add to cart feature.
 
 ## Technologies Used
 

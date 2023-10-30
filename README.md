@@ -49,6 +49,8 @@ Strict TypeScript: The project is developed using TypeScript for strong typing.
 2. **Payment Page**: Integrate a payment gateway for handling course purchases.
 
 3. **Add to cart**: Should add the add to cart feature.
+ 
+4. **Responsive**: yet to make website responsive to smaller screens using Tailwind.
 
 ## Technologies Used
 
